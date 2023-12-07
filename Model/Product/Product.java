@@ -1,14 +1,14 @@
-package Prodotto;
+package Product;
 import java.util.UUID;
 
-public class Prodotto {
+public class Product {
 	private Integer id;
 	private String code;
 	private String description;
 	private Double price;
 	private Integer quantity;
 	
-	public Prodotto(Integer id, String description, Double price, Integer qty) {
+	public Product(Integer id, String description, Double price, Integer qty) {
 		super();
 		this.id = id;
 		this.code = UUID.randomUUID().toString();
