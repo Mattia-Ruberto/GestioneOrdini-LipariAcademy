@@ -2,19 +2,19 @@ package User;
 
 public class User {
 	private Integer id;
-	private String nome;
-	private String cognome;
+	private String name;
+	private String surname;
 	private String username;
 	private String password;
 	private String email;
 	private Integer id_role;	
 	
 	
-	public User(Integer id, String nome, String cognome, String username, String password, String email, Integer id_role) {
+	public User(Integer id, String name, String surname, String username, String password, String email, Integer id_role) {
 		super();
 		this.id = id;
-		this.nome = nome;
-		this.cognome = cognome;
+		this.name = name;
+		this.surname = surname;
 		this.username = username;
 		this.password = password;
 		this.email = email;
@@ -32,23 +32,23 @@ public class User {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getName() {
+		return name;
 	}
 
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 
-	public String getCognome() {
-		return cognome;
+	public String getSurname() {
+		return surname;
 	}
 
 
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
+	public void setCognome(String surname) {
+		this.surname = surname;
 	}
 
 
