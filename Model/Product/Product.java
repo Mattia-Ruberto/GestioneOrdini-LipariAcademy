@@ -43,7 +43,7 @@ public class Product {
 	
 	public void removeItem(int qty) {
 		if(this.quantity == 0) {
-			throw new ArithmeticException("Field quantity cannot contain negative numbers.");
+			throw new ArithmeticException("Field 'quantity' cannot contain negative numbers.");
 		}else {
 			this.quantity -= qty;
 		}
