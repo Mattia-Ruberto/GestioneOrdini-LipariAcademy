@@ -1,0 +1,38 @@
+
+Creare un sistema per la gestione degli ordini di un cliente.
+Di seguito gli step implementativi richiesti:
+
+
+BASE DATI
+1. creazione delle tabelle:
+
+ t_role
+ 	codice (PK), descrizione
+
+ t_user:
+ 	id (PK), nome, cognome, username, password, email, role
+
+ t_product
+	id (PK), codice, descrizione, costo, magazzino (int)
+
+ tabelle per la gestione dell'ordine considerando che:
+ 1. ogni ordine può avere diversi prodotti con diversi item per prodotto acquistati
+ 2. relazione con utente e prodotto
+ 3. codice ordine (alfanumerico generato automaticamente dla sistema, es: UUID)
+ 4. data ordine ed indirizzo di spedizione scelto tra quelli disponibili per l'utente 	
+
+PUNTI FUNZIONE
+
+1. login
+2. creazione del menu per la selezione delle funzionalità disponibili
+3. elenco ordini utente
+4. creazione nuovo ordine
+5. cancellazione ordine
+6. elenco di tutti gli ordini per utente di tipo admin
+
+
+INDICAZIONI DI MASSIMA
+Utilizzare, ove possibile, eredità e polimorfismo. Organizzare il codice utilizzando le interfacce e stratificazione dei livelli tramite il pattern MVC.
+Utilizzo del pattern Singleton e dell'accesso al database tramite JDBC o JPA (in base alle conoscenze di base ).
+
+
