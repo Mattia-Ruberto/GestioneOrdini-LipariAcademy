@@ -1,4 +1,4 @@
-package User;
+package com.lipari.gestioneordini.Model.User;
 
 public class User {
 	private Integer id;

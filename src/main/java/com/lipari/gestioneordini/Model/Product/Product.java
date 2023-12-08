@@ -1,4 +1,4 @@
-package Product;
+package com.lipari.gestioneordini.Model.Product;
 import java.util.UUID;
 
 public class Product {

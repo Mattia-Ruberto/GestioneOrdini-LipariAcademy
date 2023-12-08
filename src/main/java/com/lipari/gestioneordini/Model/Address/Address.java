@@ -1,10 +1,10 @@
-package Address;
+package com.lipari.gestioneordini.Model.Address;
 
 public class Address{
-	private String Street;
-	private Integer Number;
-	private String City;
-	private String CAP;
+	private final String Street;
+	private final Integer Number;
+	private final String City;
+	private final String CAP;
 	
 	public Address(String Street, Integer Number, String City, String CAP) {
 		super();
