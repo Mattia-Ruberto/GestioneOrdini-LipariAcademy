@@ -1,15 +1,15 @@
 package com.lipari.gestioneordini.Model.Item;
 public class Item {
 	private Integer id;
-	private Integer id_order;
 	private Integer id_product;
+        private String description;
 	private Integer quantity;
         private Double price;
 	
-	public Item(Integer id, Integer id_order, Integer id_product, Integer quantity) {
+	public Item(Integer id, Integer id_product,String description, Integer quantity) {
 		super();
 		this.id = id;
-		this.id_order = id_order;
+                this.description = description;
 		this.id_product = id_product;
 		this.quantity = quantity;
 	}
@@ -22,14 +22,6 @@ public class Item {
 		this.id = id;
 	}
 
-	public Integer getId_order() {
-		return id_order;
-	}
-
-	public void setId_order(Integer id_order) {
-		this.id_order = id_order;
-	}
-
 	public Integer getId_product() {
 		return id_product;
 	}
@@ -37,6 +29,14 @@ public class Item {
 	public void setId_product(Integer id_product) {
 		this.id_product = id_product;
 	}
+        
+        public String getDescription(){
+            return this.description;
+        }
+        
+        public void setDescription(String description){
+            this.description = description;
+        }
 
 	public Integer getQuantity() {
 		return quantity;

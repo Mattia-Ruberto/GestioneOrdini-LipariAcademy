@@ -3,8 +3,10 @@ package com.lipari.gestioneordini.Model.Order;
 import java.sql.Date;
 import java.util.List;
 import com.lipari.gestioneordini.Model.Item.*;
+import java.util.UUID;
+
 public class Order {
-	private Integer id;
+	private String uuid;
 	private Integer id_user;
 	private Date date_order;
 	private String address;
@@ -16,7 +18,7 @@ public class Order {
 
 	public Order(Integer id, Integer id_user, Date date_order, String address, List<Item> products, Double total_price) {
 		super();
-		this.id = id;
+		this.uuid = UUID.randomUUID().toString();
 		this.id_user = id_user;
 		this.date_order = date_order;
 		this.address = address;
@@ -25,12 +27,8 @@ public class Order {
 	}
 
 
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
+	public String getUUID() {
+		return this.uuid;
 	}
 
 	public Integer getId_user() {
@@ -74,11 +72,11 @@ public class Order {
 	}
 	
 	public void calculateTotalPrice() {
-		Double total_price = 0.00;
+		Double tot_price = 0.00;
 		for (Item item : this.getProducts()) {
-			total_price += item.getPrice();
+			tot_price += item.getPrice();
 		}
-		this.total_price = total_price;
+		this.total_price = tot_price;
 	}
 	
 	
