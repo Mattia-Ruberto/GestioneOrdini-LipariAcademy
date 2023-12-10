@@ -2,16 +2,18 @@ package com.lipari.gestioneordini.Model.Item;
 public class Item {
 	private Integer id;
 	private Integer id_product;
-        private String description;
+    	private String description;
 	private Integer quantity;
-        private Double price;
+    private Double price;
+    
 	
-	public Item(Integer id, Integer id_product,String description, Integer quantity) {
+	public Item(Integer id, Integer id_product,String description, Integer quantity, Double price) {
 		super();
 		this.id = id;
                 this.description = description;
 		this.id_product = id_product;
 		this.quantity = quantity;
+		this.price = price;
 	}
 
 	public Integer getId() {
@@ -53,6 +55,14 @@ public class Item {
         public void setPrice(Double nprice){
             this.price = nprice;
         }
+        
+    public String toString() {
+    	return "ID Product: "+this.getId_product()+
+    			"\nDescription: "+this.getDescription()+
+    			"\nQuantity: "+this.getQuantity()+
+    			"\nPrice: "+this.getPrice();
+    			
+    }
 	
 	
 	

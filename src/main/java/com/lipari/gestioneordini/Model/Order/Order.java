@@ -1,7 +1,9 @@
 package com.lipari.gestioneordini.Model.Order;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
+
 import com.lipari.gestioneordini.Model.Item.*;
 import java.util.UUID;
 
@@ -10,20 +12,20 @@ public class Order {
 	private Integer id_user;
 	private Date date_order;
 	private String address;
-	private List<Item> products;
+	private Map<Integer,Item> products;
 	private Double total_price;
 	
 	public Order() {
 	}	
 
-	public Order(Integer id, Integer id_user, Date date_order, String address, List<Item> products, Double total_price) {
+	public Order(Integer id_user, String address, Map<Integer,Item> products) {
 		super();
 		this.uuid = UUID.randomUUID().toString();
 		this.id_user = id_user;
-		this.date_order = date_order;
+		this.date_order = new Date();
 		this.address = address;
 		this.products = products;
-		this.total_price= total_price;
+		this.calculateTotalPrice();
 	}
 
 
@@ -55,11 +57,11 @@ public class Order {
 		this.address = address;
 	}
 
-	public List<Item> getProducts() {
+	public Map<Integer,Item> getProducts() {
 		return products;
 	}
 
-	public void setProducts(List<Item> products) {
+	public void setProducts(Map<Integer,Item> products) {
 		this.products = products;
 	}
 
@@ -73,10 +75,19 @@ public class Order {
 	
 	public void calculateTotalPrice() {
 		Double tot_price = 0.00;
-		for (Item item : this.getProducts()) {
-			tot_price += item.getPrice();
+		for (Item item : this.getProducts().values()) {
+			tot_price += item.getPrice()*item.getQuantity();
 		}
 		this.total_price = tot_price;
+	}
+	
+	public String toString() {
+		return "Info Order:"+
+				"\nUUID: "+this.getUUID()+
+				"\nID USER: "+this.getId_user()+
+				"\nDATE ORDER: "+this.getDate_order()+
+				"\nADDRESS: "+this.getAddress()+
+				"\nTOTAL PRICE: "+this.getTotal_price();
 	}
 	
 	
