@@ -1,8 +1,8 @@
 package com.lipari.gestioneordini.Controller.Order;
 
-import java.sql.Date;
+import java.util.Date;
 import java.util.List;
-
+import java.util.Map;
 import com.lipari.gestioneordini.Model.Item.Item;
 import com.lipari.gestioneordini.Model.Order.Order;
 import com.lipari.gestioneordini.View.ViewOrder.ViewOrder;
@@ -34,12 +34,8 @@ public class OrderController {
 		this.orderView = orderView;
 	}
 	
-	public void setOrderId(Integer id) {
-		orderModel.setId(id);
-	}
-	
-	public Integer getOrderId() {
-		return orderModel.getId();
+	public String getUUID() {
+		return orderModel.getUUID();
 	}
 	
 	public void setOrderId_user(Integer id_user) {
@@ -66,11 +62,11 @@ public class OrderController {
 		return orderModel.getAddress();
 	}
 	
-	public void setOrderProducts(List<Item> items) {
+	public void setOrderProducts(Map<Integer, Item> items) {
 		orderModel.setProducts(items);
 	}
 	
-	public List<Item> getOrderProducts(){
+	public Map<Integer, Item> getOrderProducts(){
 		return orderModel.getProducts();
 	}
 	

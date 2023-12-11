@@ -4,8 +4,8 @@ public class Item {
 	private Integer id_product;
     	private String description;
 	private Integer quantity;
-    private Double price;
-    
+        private Double price;
+
 	
 	public Item(Integer id, Integer id_product,String description, Integer quantity, Double price) {
 		super();

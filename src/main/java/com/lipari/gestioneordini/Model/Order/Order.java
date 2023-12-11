@@ -1,7 +1,6 @@
 package com.lipari.gestioneordini.Model.Order;
 
 import java.util.Date;
-import java.util.List;
 import java.util.Map;
 
 import com.lipari.gestioneordini.Model.Item.*;
@@ -44,6 +43,14 @@ public class Order {
 	public Date getDate_order() {
 		return date_order;
 	}
+        
+        public String getId(Integer id){
+            return this.uuid;
+        }
+        
+        public Date getOrderDate(){
+            return this.date_order;
+        }
 
 	public void setDate_order(Date date_order) {
 		this.date_order = date_order;

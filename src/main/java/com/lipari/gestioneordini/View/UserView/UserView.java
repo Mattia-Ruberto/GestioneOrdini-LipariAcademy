@@ -1,16 +1,22 @@
 package com.lipari.gestioneordini.View.UserView;
-
+import com.lipari.gestioneordini.Model.User.User;
 public class UserView {
-	
-	public void printUserInfo(Integer id, String name, String surname, String username, String password, String email, Integer id_role) {
+	private String role = "";
+	public void printUserInfo(User user) {
+            
+            if(user.getId_role().equals(1)){
+                role = "admin";
+            }else{
+                role = "user";
+            }
 		System.out.println("User information:"+
-							"\nID: "+id+
-							"\nName: "+name+
-							"\nSurname: "+surname+
-							"\nUsername: "+username+
-							"\nPassword: "+password+
-							"\nEmail: "+email+
-							"\nID_role: "+id_role);
+							"\nID: "+user.getId()+
+							"\nName: "+user.getName()+
+							"\nSurname: "+user.getSurname()+
+							"\nUsername: "+user.getUsername()+
+							"\nPassword: "+user.getPassword()+
+							"\nEmail: "+user.getEmail()+
+							"\nRole: "+ this.role);
 	}
 	
 	

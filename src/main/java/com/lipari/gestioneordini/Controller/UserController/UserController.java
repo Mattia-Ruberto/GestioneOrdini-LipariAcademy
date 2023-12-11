@@ -69,13 +69,4 @@ public class UserController {
 		return userModel.getId_role();
 	}
 	
-	
-
-	public void updateUserInfoView() {                  
-        userView.printUserInfo(userModel.getId(),userModel.getName(),userModel.getSurname(),
-        		userModel.getUsername(),userModel.getPassword(),userModel.getEmail(),userModel.getId_role());  
-     }      
-	
-	
-
 }

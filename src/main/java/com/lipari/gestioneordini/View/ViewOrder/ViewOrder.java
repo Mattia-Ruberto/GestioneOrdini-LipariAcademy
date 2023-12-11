@@ -1,18 +1,18 @@
 package com.lipari.gestioneordini.View.ViewOrder;
 
-import java.sql.Date;
-import java.util.List;
+import com.lipari.gestioneordini.Model.Order.Order;
+
 import com.lipari.gestioneordini.Model.Item.*;
 
 public class ViewOrder {
 	
-	public void printOrderInfo(Integer id, Integer id_user, Date date_order, String address, List<Item> products, Double total_price) {
+	public void printOrderInfo(Order order) {
 		System.out.println("Order Information:"+
-							"\nID Order: "+id+
-							"\nID User: "+id_user+
-							"\nDate: "+date_order+
-							"\nShipping Address: "+address);
-		for (Item item : products) {
+							"\nUUID Order: "+order.getUUID()+
+							"\nID User: "+order.getId_user()+
+							"\nDate: "+order.getDate_order()+
+							"\nShipping Address: "+order.getAddress());
+		for (Item item : order.getProducts().values()) {
 			System.out.println("\nItems:"+
 								"\n"+item.getId_product()+
 								"\nQuantity: "+item.getQuantity());

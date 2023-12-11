@@ -21,7 +21,9 @@ public class User {
 		this.id_role = id_role;
 	}
 
-
+        public void printUser(){
+            System.out.println("ID");
+        }
 
 
 	public Integer getId() {
