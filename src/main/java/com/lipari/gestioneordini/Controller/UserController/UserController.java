@@ -4,7 +4,7 @@ import com.lipari.gestioneordini.Model.User.User;
 import com.lipari.gestioneordini.View.UserView.UserView;
 
 public class UserController {
-	private User userModel;
+	private User userModel;     
 	private UserView userView;
 	
 	public UserController(User userModel, UserView userView) {
