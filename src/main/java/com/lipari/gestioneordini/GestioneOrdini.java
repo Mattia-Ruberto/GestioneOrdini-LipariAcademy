@@ -51,6 +51,7 @@ public class GestioneOrdini {
                 case "1" -> {
                     boolean check_pwd = false; //Per ciclare l'inserimento della password finchè non combaciano.
                     boolean check_email = false; //Per validare l'email.
+                    
                     //Inizializzazione variabili
                    
                     String name = "";
@@ -283,7 +284,8 @@ public class GestioneOrdini {
                     //Elimina un ordine
                     //Visualizza gli ordini effettuati dal cliente
                     //LOGOUT
-                    	        }
+            }
         }
+        System.gc();
     }
 }

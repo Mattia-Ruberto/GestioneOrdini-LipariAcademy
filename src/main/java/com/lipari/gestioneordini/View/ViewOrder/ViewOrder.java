@@ -15,6 +15,7 @@ public class ViewOrder {
 		for (Item item : order.getProducts().values()) {
 			System.out.println("\nItems:"+
 								"\n"+item.getId_product()+
+                                                                "\nDescription: " + item.getDescription()+
 								"\nQuantity: "+item.getQuantity());
 		}
 	}
