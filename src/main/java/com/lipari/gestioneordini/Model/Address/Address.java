@@ -1,11 +1,15 @@
 package com.lipari.gestioneordini.Model.Address;
 
 public class Address{
-	private final String Street;
-	private final Integer Number;
-	private final String City;
-	private final String CAP;
-	
+	private String Street;
+	private Integer Number;
+	private String City;
+	private String CAP;
+	private Integer userID;
+
+	public Address(){
+		super();
+	}
 	public Address(String Street, Integer Number, String City, String CAP) {
 		super();
 		this.Street = Street;
@@ -29,8 +33,27 @@ public class Address{
 	public String getCAP() {
 		return this.CAP;
 	}
-	
+	public void setStreet(String street){
+		this.Street = street;
+	}
+
+	public void setNumber(Integer number) {
+		this.Number = number;
+	}
+
+	public void setCity(String city) {
+		this.City = city;
+	}
+
+	public void setCAP(String CAP) {
+		this.CAP = CAP;
+	}
+
+	public void setUserID(Integer userID) {
+		this.userID = userID;
+	}
+
 	public String PrintFullAddress() {
-		return this.City + " " + this.Number.toString() + ", " + this.City + ", " + this.CAP;
+		return this.Street + " " + this.Number.toString() + ", " + this.City + ", " + this.CAP;
 	}
 }

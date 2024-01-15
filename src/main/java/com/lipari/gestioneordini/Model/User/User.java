@@ -9,10 +9,11 @@ public class User {
 	private String email;
 	private Integer id_role;	
 	
-	
-	public User(Integer id, String name, String surname, String username, String password, String email, Integer id_role) {
+	public User(){
 		super();
-		this.id = id;
+	}
+	public User(String name, String surname, String username, String password, String email, Integer id_role) {
+		super();
 		this.name = name;
 		this.surname = surname;
 		this.username = username;
@@ -24,15 +25,6 @@ public class User {
         public void printUser(){
             System.out.println("ID");
         }
-
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
 
 	public String getName() {
 		return name;
