@@ -1,7 +1,6 @@
 package com.lipari.gestioneordini.Model.Order;
 
 import java.util.*;
-import com.lipari.gestioneordini.Model.Item.*;
 
 public class Order {
 	private String uuid;

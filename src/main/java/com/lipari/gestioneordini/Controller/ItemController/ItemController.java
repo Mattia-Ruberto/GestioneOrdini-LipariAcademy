@@ -6,11 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 
 import com.lipari.gestioneordini.Model.Item.Item;
 
-import javax.swing.plaf.nimbus.State;
 
 public class ItemController {
     private static final String ins_query = "Insert into GestioneOrdini.Item( name, description, qty, price)" +
