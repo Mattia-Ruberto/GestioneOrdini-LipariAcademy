@@ -1,71 +1,58 @@
 package com.lipari.gestioneordini.Model.Item;
 public class Item {
-	private Integer id;
 	private Integer id_product;
-    	private String description;
+	private String name;
+	private String description;
 	private Integer quantity;
-        private Double price;
+	private Double price;
 
-	
-	public Item(Integer id, Integer id_product,String description, Integer quantity, Double price) {
+	public Item(){
 		super();
-		this.id = id;
-                this.description = description;
-		this.id_product = id_product;
+	}
+	public Item(String name, String description, Integer quantity, Double price) {
+		super();
+		this.name = name;
+		this.description = description;
 		this.quantity = quantity;
 		this.price = price;
 	}
-
-	public Integer getId() {
-		return id;
-	}
-
-	public void setId(Integer id) {
-		this.id = id;
-	}
-
 	public Integer getId_product() {
 		return id_product;
 	}
-
-	public void setId_product(Integer id_product) {
-		this.id_product = id_product;
+	public void setId(Integer id){
+		this.id_product = id;
 	}
-        
-        public String getDescription(){
-            return this.description;
-        }
-        
-        public void setDescription(String description){
-            this.description = description;
-        }
+	public String getDescription(){
+		return this.description;
+	}
+	public void setDescription(String description){
+		this.description = description;
+	}
 
 	public Integer getQuantity() {
-		return quantity;
+		return this.quantity;
 	}
 
+	public String getName(){return this.name;}
+	public void setName(String name){this.name = name;}
 	public void setQuantity(Integer quantity) {
 		this.quantity = quantity;
 	}
         
-        public double getPrice(){
-            return this.price;
-        }
+	public double getPrice(){
+		return this.price;
+	}
         
-        public void setPrice(Double nprice){
-            this.price = nprice;
-        }
+	public void setPrice(Double nprice){
+		this.price = nprice;
+	}
         
-    public String toString() {
-    	return "ID Product: "+this.getId_product()+
+    @Override
+	public String toString() {
+    	return "\nID Product: "+this.getId_product()+
+				"\nName: "+ this.getName()+
     			"\nDescription: "+this.getDescription()+
     			"\nQuantity: "+this.getQuantity()+
     			"\nPrice: "+this.getPrice();
-    			
     }
-	
-	
-	
-	
-
 }
